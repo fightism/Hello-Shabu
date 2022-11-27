@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0; 
+  margin: 0;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+	@apply
+  cursor-pointer
+	flex
+  flex-col
+	justify-center
+  text-center
+  align-middle
+  py-5
+	rounded
+  bg-orange-400 hover:bg-orange-500 text-zinc-900
+  border-b-4 border-orange-700 hover:border-orange-600 
+   active:border-orange-400 active:bg-orange-300 active:shadow-lg transition duration-150 ease-in-out
+  focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 focus:text-slate-100}
+
+  .table {
+    @apply
+   
+
+    align-middle
+    rounded
+    bg-white shadow-lg border border-gray-200}
+
+    .centered {
+   
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      z-index:2;
+    }
+
+    .bgBlack{
+        background-color: rgba(0, 0, 0, 0.817);
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+      }
