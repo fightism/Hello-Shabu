@@ -23,6 +23,7 @@ export default function Home() {
     sum += parseInt(element.qty);
   });
 
+ 
 
 
   const [menuPage,setMenuPage] = useState("pig")
@@ -47,10 +48,29 @@ export default function Home() {
         case "drink":
           return(<Drink/>) 
     }
-  
-
-   
   }
+const cartHave =
+  <button className="flex box justify-center  w-full" 
+  onClick={() => dispatch(PAGE_CHANGE("summary"))}>
+   <h1 className="text-xl sm:text-xl mx-auto">รายการอาหารที่สั่ง &nbsp; {sum} &nbsp;จำนวน</h1>
+  </button>
+
+const cartEmpty =
+<button className="flex boxdis justify-center  w-full" disabled
+onClick={() => dispatch(PAGE_CHANGE("summary"))}>
+ <h1 className="text-xl sm:text-xl mx-auto">ยังไม่มีรายการอาหาร กรุณากดสั่งอาหาร</h1>
+</button>
+
+
+
+ function checkCart(){
+  let checkC = shabu.Cart
+  if (checkC.length === 0){
+    return <div>{cartEmpty}</div>
+  }
+  else
+  return <div>{cartHave}</div>
+ }
 
   return (
     <div>
@@ -116,18 +136,10 @@ export default function Home() {
 
       </div>
 
-      {/* <div className="grid overflow-hidden grid-cols-1 grid-rows-1 gap-2 mx-1 mb-4 ">
-<div className="table ">
-      <List/>
-      </div> */}
 
  
 
-
-     <button className="flex box justify-center  w-full" 
-     onClick={() => dispatch(PAGE_CHANGE("summary"))}>
-      <h1 className="text-xl sm:text-xl mx-auto">รายการอาหารที่สั่ง &nbsp; {sum} &nbsp;จำนวน</h1>
-     </button>
+      {checkCart()}
      </div>
 
 

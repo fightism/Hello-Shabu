@@ -37,6 +37,22 @@ a {
    active:border-orange-400 active:bg-orange-300 active:shadow-lg transition duration-150 ease-in-out
   focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 focus:text-slate-100}
 
+
+  .boxdis {
+    @apply
+    cursor-pointer
+    flex
+    flex-col
+    justify-center
+    text-center
+    align-middle
+    py-5
+    rounded
+    bg-gray-200 hover:bg-gray-400 text-zinc-900
+    border-b-4 border-gray-700 hover:border-gray-600 
+     active:border-gray-400 active:bg-gray-300 active:shadow-lg transition duration-150 ease-in-out
+    focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 focus:text-slate-100}
+
   .table {
     @apply
    
